@@ -1,0 +1,19 @@
+{
+  "title": "Connect to FutuOpenD",
+  "subtitle": "Connect to your local FutuOpenD gateway to access moomoo account data",
+  "host": "Host",
+  "port": "Port",
+  "connectBtn": "Connect",
+  "disconnectBtn": "Disconnect",
+  "connecting": "Connecting...",
+  "status": "Status",
+  "tradeUnlock": "Trade Unlock",
+  "tradePassword": "Trade Password",
+  "unlockBtn": "Unlock",
+  "connected": "Connected",
+  "tradeUnlocked": "Trade Unlocked",
+  "disconnected": "Disconnected",
+  "error": "Connection Error",
+  "reconnecting": "Reconnecting",
+  "prerequisite": "Before connecting, make sure FutuOpenD is running and you are logged into your moomoo account."
+}

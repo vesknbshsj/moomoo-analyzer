@@ -1,0 +1,18 @@
+{
+  "title": "汇兑盈亏分离",
+  "subtitle": "将汇率波动影响与股票价格变动分开分析",
+  "totalPL": "总盈亏（本位币）",
+  "stockPL": "股票盈亏",
+  "fxPL": "汇兑盈亏",
+  "fxImpactRatio": "汇率影响比例",
+  "positionsWithFx": "受汇率影响的持仓",
+  "waterfallChart": "盈亏瀑布图",
+  "perPosition": "逐仓分析",
+  "tradeCurrency": "交易币种",
+  "baseCurrency": "本位币",
+  "fxRateBuy": "买入汇率",
+  "fxRateCurrent": "当前汇率",
+  "holdDays": "持有天数",
+  "currencyExposure": "币种敞口",
+  "noFxExposure": "所有持仓均为本位币计价，无汇兑敞口需要分析。"
+}

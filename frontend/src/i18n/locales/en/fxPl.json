@@ -1,0 +1,18 @@
+{
+  "title": "FX Profit/Loss Decoupling",
+  "subtitle": "Separate currency exchange impact from stock price movement",
+  "totalPL": "Total P&L (Base)",
+  "stockPL": "Stock P&L",
+  "fxPL": "FX P&L",
+  "fxImpactRatio": "FX Impact Ratio",
+  "positionsWithFx": "Positions with FX Exposure",
+  "waterfallChart": "P&L Waterfall",
+  "perPosition": "Per-Position Breakdown",
+  "tradeCurrency": "Trade Currency",
+  "baseCurrency": "Base Currency",
+  "fxRateBuy": "Buy Rate",
+  "fxRateCurrent": "Current Rate",
+  "holdDays": "Hold Days",
+  "currencyExposure": "Currency Exposure",
+  "noFxExposure": "All positions are in your base currency. No FX exposure to analyze."
+}

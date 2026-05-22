@@ -1,0 +1,21 @@
+{
+  "appName": "Moomoo 股票分析器",
+  "connect": "连接",
+  "dashboard": "仪表盘",
+  "roast": "持仓吐槽",
+  "fxPl": "汇兑盈亏分离",
+  "trend": "趋势分析",
+  "loading": "加载中...",
+  "error": "错误",
+  "retry": "重试",
+  "notConnected": "未连接到FutuOpenD，请先连接。",
+  "green": "涨",
+  "red": "跌",
+  "marketValue": "市值",
+  "pl": "盈亏",
+  "dayChange": "日变动",
+  "percent": "%",
+  "noData": "暂无数据",
+  "export": "导出",
+  "share": "分享"
+}

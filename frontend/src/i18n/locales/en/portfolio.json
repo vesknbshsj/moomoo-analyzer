@@ -1,0 +1,18 @@
+{
+  "title": "Portfolio Dashboard",
+  "summary": "Summary",
+  "positions": "Positions",
+  "totalValue": "Total Value",
+  "totalPL": "Total P&L",
+  "dayChange": "Day Change",
+  "holdings": "Holdings",
+  "diversification": "Diversification Score",
+  "concentration": "Top Holding Concentration",
+  "sectorBreakdown": "Sector Breakdown",
+  "currencyBreakdown": "Currency Breakdown",
+  "cost": "Cost",
+  "currentPrice": "Current",
+  "qty": "Qty",
+  "noPositions": "No positions found. Connect to your account to view your portfolio.",
+  "unclassified": "Unclassified"
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Stock Price Trend Analysis",
+  "searchPlaceholder": "Search stock code or name...",
+  "noStockSelected": "Search and select a stock to analyze",
+  "timeframe": "Timeframe",
+  "indicators": "Indicators",
+  "candlestick": "Candlestick",
+  "volume": "Volume",
+  "support": "Support",
+  "resistance": "Resistance",
+  "strength": "Strength"
+}

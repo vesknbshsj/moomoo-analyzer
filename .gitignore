@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.egg-info/
+.venv/
+venv/
+env/
+*.whl
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Logs
+*.log
+logs/
+
+# Temp
+*.tmp
+tmp/

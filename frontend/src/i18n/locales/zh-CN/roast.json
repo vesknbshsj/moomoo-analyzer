@@ -1,0 +1,12 @@
+{
+  "title": "持仓吐槽 & 回顾",
+  "score": "吐槽评分",
+  "verdict": "综合评价",
+  "regenerate": "再吐槽一次",
+  "shareImage": "分享图片",
+  "metrics": "评估指标",
+  "positionsRoasted": "被吐槽的持仓",
+  "positionWeight": "权重",
+  "plRatio": "盈亏",
+  "generatedAt": "生成时间"
+}

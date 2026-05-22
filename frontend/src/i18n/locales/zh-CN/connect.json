@@ -1,0 +1,19 @@
+{
+  "title": "连接到 FutuOpenD",
+  "subtitle": "连接到本地 FutuOpenD 网关以访问 moomoo 账户数据",
+  "host": "主机",
+  "port": "端口",
+  "connectBtn": "连接",
+  "disconnectBtn": "断开连接",
+  "connecting": "连接中...",
+  "status": "状态",
+  "tradeUnlock": "交易解锁",
+  "tradePassword": "交易密码",
+  "unlockBtn": "解锁",
+  "connected": "已连接",
+  "tradeUnlocked": "交易已解锁",
+  "disconnected": "未连接",
+  "error": "连接错误",
+  "reconnecting": "重新连接中",
+  "prerequisite": "连接前请确保 FutuOpenD 已启动并已登录 moomoo 账户。"
+}

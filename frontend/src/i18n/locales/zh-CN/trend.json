@@ -1,0 +1,12 @@
+{
+  "title": "股价趋势分析",
+  "searchPlaceholder": "搜索股票代码或名称...",
+  "noStockSelected": "搜索并选择一只股票进行分析",
+  "timeframe": "时间周期",
+  "indicators": "技术指标",
+  "candlestick": "K线图",
+  "volume": "成交量",
+  "support": "支撑位",
+  "resistance": "阻力位",
+  "strength": "强度"
+}

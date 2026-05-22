@@ -1,0 +1,21 @@
+{
+  "appName": "Moomoo Analyzer",
+  "connect": "Connect",
+  "dashboard": "Dashboard",
+  "roast": "Portfolio Roast",
+  "fxPl": "FX P&L Decoupling",
+  "trend": "Trend Analysis",
+  "loading": "Loading...",
+  "error": "Error",
+  "retry": "Retry",
+  "notConnected": "Not connected to FutuOpenD. Please connect first.",
+  "green": "Green",
+  "red": "Red",
+  "marketValue": "Market Value",
+  "pl": "P/L",
+  "dayChange": "Day Change",
+  "percent": "%",
+  "noData": "No Data",
+  "export": "Export",
+  "share": "Share"
+}
