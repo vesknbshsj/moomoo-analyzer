@@ -1,4 +1,5 @@
 import logging
+import math
 
 from app.core.cache import cached
 from app.core.futu_client import futu_client
@@ -6,6 +7,19 @@ from app.models.portfolio import PortfolioSummary, Position, SectorBreakdown
 from app.utils.market_utils import get_default_markets, parse_stock_code
 
 logger = logging.getLogger(__name__)
+
+
+def _num(value, fallback=0.0):
+    """Return value as float, or fallback if value is None/NaN/Inf."""
+    if value is None:
+        return fallback
+    try:
+        f = float(value)
+        if math.isnan(f) or math.isinf(f):
+            return fallback
+        return f
+    except (ValueError, TypeError):
+        return fallback
 
 
 class PortfolioService:
@@ -40,19 +54,35 @@ class PortfolioService:
 
                 for _, row in data.iterrows():
                     code = row["code"]
-                    snap = snap_map.get(code, {})
-                    current_price = snap.get("last_price", 0) or row.get("cost_price", 0)
-                    market_val = snap.get("market_val", 0) or (
-                        row.get("qty", 0) * current_price
+                    snap = snap_map.get(code)
+
+                    # Current price: snapshot last_price > position nominal_price > cost_price
+                    qty = _num(row.get("qty"))
+                    cost_price = _num(row.get("cost_price"))
+
+                    current_price = _num(
+                        snap["last_price"] if snap is not None else None,
+                        fallback=_num(row.get("nominal_price"), fallback=cost_price),
                     )
-                    pl_val = snap.get("pl_val", 0) or (market_val - row.get("cost_price", 0) * row.get("qty", 0))
-                    pl_ratio = snap.get("pl_ratio", 0) or (
-                        (pl_val / (row.get("cost_price", 1) * row.get("qty", 1)) * 100)
-                        if row.get("qty", 0) else 0
+
+                    # P&L already computed by Futu API — use directly when available
+                    pl_val = _num(row.get("pl_val"), fallback=None)
+                    pl_ratio = _num(row.get("pl_ratio"), fallback=None)
+                    market_val = _num(row.get("market_val"), fallback=None)
+
+                    if pl_val is None or market_val is None:
+                        market_val = qty * current_price
+                        pl_val = market_val - cost_price * qty
+
+                    if pl_ratio is None:
+                        cost_basis = cost_price * qty
+                        pl_ratio = (pl_val / cost_basis * 100) if cost_basis else 0
+
+                    prev_close = _num(
+                        snap["prev_close_price"] if snap is not None else None,
+                        fallback=current_price,
                     )
-                    day_change = (
-                        current_price - snap.get("prev_close_price", current_price)
-                    ) * row.get("qty", 0)
+                    day_change = (current_price - prev_close) * qty
 
                     market_code, symbol = parse_stock_code(code)
                     currency_map = {"HK": "HKD", "US": "USD", "CN": "CNH"}
@@ -62,8 +92,8 @@ class PortfolioService:
                             code=code,
                             stock_name=row.get("stock_name", symbol),
                             market=market_code,
-                            qty=row.get("qty", 0),
-                            cost_price=row.get("cost_price", 0),
+                            qty=qty,
+                            cost_price=cost_price,
                             current_price=current_price,
                             market_val=market_val,
                             pl_val=pl_val,
